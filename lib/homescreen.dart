@@ -423,6 +423,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         colors: [AppColor.primary,AppColor.primary,AppColor.Gradient0],
                         begin: Alignment.topCenter,
                         end:Alignment.bottomCenter,
+                        // stops: []
                       )
                   ),
                 )
