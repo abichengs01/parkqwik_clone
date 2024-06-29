@@ -414,6 +414,17 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
 
+                ),
+                Container(
+                  height: 136,width: MediaQuery.of(context).size.width*.92,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      gradient: LinearGradient(
+                        colors: [AppColor.primary,AppColor.primary,AppColor.Gradient0],
+                        begin: Alignment.topCenter,
+                        end:Alignment.bottomCenter,
+                      )
+                  ),
                 )
 
 
