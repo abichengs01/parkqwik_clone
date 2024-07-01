@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:parkqwik/colors.dart';
 
@@ -11,8 +12,26 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
 
   var vehiclenum = TextEditingController();
+  final List<Widget> image=[ Cards.slide,Cards.slide,Cards.slide];
+
+  int _CurrentPage=0;
 
   @override
+
+  buildCarouselIndicator(){
+    return Row(mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        for (int i=0;i<image.length;i++)
+          Container( height: 9,width: 9,
+            margin: EdgeInsets.all(5),
+            decoration: BoxDecoration(
+                color: i== _CurrentPage?AppColor.primary: Color(0xFFD9D9D9),
+                shape: BoxShape.circle
+            ),
+          )
+      ],
+    );
+  }
   Widget build(BuildContext context) {
     return Scaffold(
       // appBar: AppBar(
@@ -39,8 +58,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Stack(
-                      children: [CircleAvatar( radius: 26,
-                        backgroundImage: AssetImage("images/hs/dp.png"),),
+                      children: [
+                        // CircleAvatar( radius: 26,
+                        // backgroundImage: AssetImage("images/hs/dp.png",),),
+                        Container(
+                            //child: Image.asset("images/hs/dp.png",fit: BoxFit.fill),
+                          height: 51,width: 51,
+                          //margin: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                              image: DecorationImage(image: AssetImage("images/hs/dp.png"),
+                              fit: BoxFit.fill),
+                              shape: BoxShape.circle
+                          ),),
+
                         Positioned(bottom: 0,right: 0,
                           child: CircleAvatar( radius: 10,
                             backgroundColor: Colors.white,
@@ -415,20 +446,232 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
 
                 ),
-                Container(
-                  height: 136,width: MediaQuery.of(context).size.width*.92,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      gradient: LinearGradient(
-                        colors: [AppColor.primary,AppColor.primary,AppColor.Gradient0],
-                        begin: Alignment.topCenter,
-                        end:Alignment.bottomCenter,
-                        // stops: []
+
+                SizedBox(height: 15,),
+
+                Column(
+                  children: [
+                    Container(height: 136,width: MediaQuery.of(context).size.width*.92,
+                      child: CarouselSlider(items: image,
+                          options:CarouselOptions(
+                            //autoPlay: true,
+                            viewportFraction: 1,
+                            onPageChanged: (value,_){
+                              setState(() {
+                                _CurrentPage =value;
+                              });
+                            }
+                          ) ),
+                    ),
+                    SizedBox(height: 5,),
+
+                    buildCarouselIndicator(),
+                  ],
+                ),
+
+                SizedBox(height: 15,),
+
+            Container(
+              height: 145 ,width: MediaQuery.of(context).size.width*.92,
+
+              decoration: BoxDecoration(
+                  boxShadow: [BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 3,
+                  )],
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15)
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(13.0),
+                child: Column( crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                  Text("Others",style: TextStyle(fontWeight: FontWeight.w600,
+                      fontSize: 16),),
+
+                    Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(height:95,width: 60,
+                        child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SizedBox(height: 10,),
+                            Container(
+                                width: 51,height: 51,
+                                decoration: BoxDecoration(
+                                    boxShadow: [BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 3,
+                                    )],
+                                    color:Colors.white,
+                                    borderRadius: BorderRadius.circular(10)
+                                ),
+                              child: Image.asset("images/hs/others/img.png"),
+                            ),
+                            SizedBox(height: 3,),
+                            Text("Rentout",style: TextStyle(fontSize: 10),),
+                            Text("Helmet",style: TextStyle(fontSize: 10),),])),
+                  Column(
+                      children: [
+                        Container(
+                          width: 51,height: 51,
+                          decoration: BoxDecoration(
+                              boxShadow: [BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 3,
+                              )],
+                              color:Colors.white,
+                              borderRadius: BorderRadius.circular(10)
+                          ),
+                          child: Image.asset("images/hs/others/img_1.png"),
+                        ),
+                        SizedBox(height: 3,),
+                        Text("Fuel Price",style: TextStyle(fontSize: 10),),
+                        ]),
+
+                  Column(
+                      children: [
+                        Container(
+                          width: 51,height: 51,
+                          decoration: BoxDecoration(
+                              boxShadow: [BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 3,
+                              )],
+                              color:Colors.white,
+                              borderRadius: BorderRadius.circular(10)
+                          ),
+                          child: Image.asset("images/hs/others/img_2.png"),
+                        ),
+                        SizedBox(height: 3,),
+                        Text("Shop",style: TextStyle(fontSize: 10),),
+                        ]),
+                  Column(
+                      children: [
+                        Container(
+                          width: 51,height: 51,
+                          decoration: BoxDecoration(
+                              boxShadow: [BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 3,
+                              )],
+                              color:Colors.white,
+                              borderRadius: BorderRadius.circular(10)
+                          ),
+                          child: Image.asset("images/hs/others/img_3.png"),
+                        ),
+                        SizedBox(height: 3,),
+                        Text("My Vechiles",style: TextStyle(fontSize: 10),),
+                      ])
+                      ],),
+
+
+
+
+
+
+                  ]),
+              ),),
+
+                SizedBox(height: 10,),
+
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Deals For You",style: TextStyle(fontWeight: FontWeight.w600,
+                          fontSize: 16),),
+
+                      SizedBox(height: 10,),
+
+                      SingleChildScrollView(scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            Stack(
+                              children:[ Container(height: 136,width: 148,
+                                  child: Image.asset("images/hs/others/deals/img.png"),
+                              ),
+                                Positioned(left: 14,top: 30,
+                                  child: Text("Recharge FASTag",style: TextStyle(fontSize: 15,
+                                  fontWeight: FontWeight.w500,color: Color(0xFFFBFF35)),),
+                                ),
+                                Positioned( left: 30,bottom: 35,
+                                  child: Container(width: 92,height: 24,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFFFFFFF),
+                                      borderRadius: BorderRadius.circular(12)
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text("Recharge Now",style: TextStyle(fontSize: 10,
+                                    fontWeight: FontWeight.w600),),
+                                  ),
+                                ),
+                            ]),
+                            SizedBox(width: 3,),
+                            
+                            
+                            Stack(
+                              children:[Container(height: 136,width: 148,
+                                //color: Colors.green,
+                                child: Image.asset("images/hs/others/deals/img_1.png"),
+                              ),
+                                Positioned(left: 18,top: 30,
+                                  child: Text("Get 25% off On",style: TextStyle(fontSize: 17,
+                                      fontWeight: FontWeight.w500,color: Color(0xFFFBFF35)),),
+                                ),
+                                Positioned( left: 42,bottom: 35,
+                                  child: Container(width: 68,height: 24,
+                                    decoration: BoxDecoration(
+                                        color: Color(0xFFFFFFFF),
+                                        borderRadius: BorderRadius.circular(12)
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text("Book Now",style: TextStyle(fontSize: 10,
+                                        fontWeight: FontWeight.w600),),
+                                  ),
+                                ),
+                              ]),
+                            SizedBox(width: 3,),
+
+                            Stack(
+                              children:[Container(
+                                height: 136,width:148,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    gradient: LinearGradient(
+                                        colors: [Color(0xFFF95AE9),
+                                          Color(0xFFEF26DC)],
+                                        begin: Alignment.topCenter,
+                                        end:Alignment.bottomCenter,
+                                        stops: [0.4,0.7]
+                                    )),
+                              ),
+                                Positioned(left: 18,top: 30,
+                                  child: Text("Get 15% off On",style: TextStyle(fontSize: 17,
+                                      fontWeight: FontWeight.w500,color: Color(0xFFFBFF35)),),
+                                ),
+                                Positioned(left: 35,top: 52,
+                                  child: Text("your first parking",style: TextStyle(fontSize: 10,
+                                      fontWeight: FontWeight.w400,color: Color(0xFFFFFFFF)),),
+                                ),
+                                Positioned( left: 42,bottom: 35,
+                                  child: Container(width: 68,height: 24,
+                                    decoration: BoxDecoration(
+                                        color: Color(0xFFFFFFFF),
+                                        borderRadius: BorderRadius.circular(12)
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text("Book Now",style: TextStyle(fontSize: 10,
+                                        fontWeight: FontWeight.w600),),
+                                  ),
+                                ),
+
+                              ]),
+
+                          ],),
                       )
+                    ],
                   ),
-                )
-
-
+                ),
 
 
               ],
