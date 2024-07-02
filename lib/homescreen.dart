@@ -142,7 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.all(13.0),
                     child: Column( crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Services",style: TextStyle(fontWeight: FontWeight.w600,
+                        Text("Services",style: TextStyle(fontWeight: FontWeight.w500,
                         fontSize: 16),),
 
                         Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -276,7 +276,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.all(13.0),
                     child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("FASTag Recharge",style: TextStyle(fontWeight: FontWeight.w600,
+                        Text("FASTag Recharge",style: TextStyle(fontWeight: FontWeight.w500,
                         fontSize: 16,),),
                         SizedBox(height: 3,),
                         Text("Get upto 100% cashback on first 3 Fastag Recharge",
@@ -342,7 +342,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                         SizedBox(height: 12,),
 
-                        Text("Discover",style: TextStyle(fontWeight: FontWeight.w600,
+                        Text("Discover",style: TextStyle(fontWeight: FontWeight.w500,
                             fontSize: 16),),
 
                         SizedBox(height: 12,),
@@ -486,7 +486,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.all(13.0),
                 child: Column( crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                  Text("Others",style: TextStyle(fontWeight: FontWeight.w600,
+                  Text("Others",style: TextStyle(fontWeight: FontWeight.w500,
                       fontSize: 16),),
 
                     Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -505,7 +505,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     color:Colors.white,
                                     borderRadius: BorderRadius.circular(10)
                                 ),
-                              child: Image.asset("images/hs/others/img.png"),
+                              child: Image.asset("images/hs/others/imgo.png"),
                             ),
                             SizedBox(height: 3,),
                             Text("Rentout",style: TextStyle(fontSize: 10),),
@@ -578,7 +578,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.all(8.0),
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Deals For You",style: TextStyle(fontWeight: FontWeight.w600,
+                      Text("Deals For You",style: TextStyle(fontWeight: FontWeight.w500,
                           fontSize: 16),),
 
                       SizedBox(height: 10,),
@@ -588,7 +588,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           children: [
                             Stack(
                               children:[ Container(height: 136,width: 148,
-                                  child: Image.asset("images/hs/others/deals/img.png"),
+                                  child: Image.asset("images/hs/others/deals/imgd.png"),
                               ),
                                 Positioned(left: 14,top: 30,
                                   child: Text("Recharge FASTag",style: TextStyle(fontSize: 15,
@@ -672,11 +672,489 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
+                SizedBox(height: 10,),
+                Container(
+                  height: 145 ,width: MediaQuery.of(context).size.width*.92,
+
+                  decoration: BoxDecoration(
+                      boxShadow: [BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 3,
+                      )],
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(13.0),
+                    child: Column( crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Gonna Travel ?",style: TextStyle(fontWeight: FontWeight.w500,
+                              fontSize: 16),),
+
+                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(height:90,width: 60,
+                                  child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 51,height: 51,
+                                          decoration: BoxDecoration(
+                                              boxShadow: [BoxShadow(
+                                                color: Colors.black12,
+                                                blurRadius: 3,
+                                              )],
+                                              color:AppColor.primarytext,
+                                              borderRadius: BorderRadius.circular(10)
+                                          ),
+                                          child: Image.asset("images/hs/travel/imgt.png"),
+                                        ),
+                                        SizedBox(height: 3,),
+                                        Text("Car Wash",style: TextStyle(fontSize: 10),),])),
+                              Column(
+                                  children: [
+                                    Container(
+                                      width: 51,height: 51,
+                                      decoration: BoxDecoration(
+                                          boxShadow: [BoxShadow(
+                                            color: Colors.black12,
+                                            blurRadius: 3,
+                                          )],
+                                          color:AppColor.primarytext,
+                                          borderRadius: BorderRadius.circular(10)
+                                      ),
+                                      child: Image.asset("images/hs/travel/img_1.png"),
+                                    ),
+                                    SizedBox(height: 3,),
+                                    Text("Estimate Toll",style: TextStyle(fontSize: 10),),
+                                  ]),
+
+                              Column(
+                                  children: [
+                                    Container(
+                                      width: 51,height: 51,
+                                      decoration: BoxDecoration(
+                                          boxShadow: [BoxShadow(
+                                            color: Colors.black12,
+                                            blurRadius: 3,
+                                          )],
+                                          color:AppColor.primarytext,
+                                          borderRadius: BorderRadius.circular(10)
+                                      ),
+                                        child: Image.asset("images/hs/travel/img_2.png"),),
+                                    SizedBox(height: 3,),
+                                    Text("Shop",style: TextStyle(fontSize: 10),),
+                                  ]),
+                              Column(
+                                  children: [
+                                    Container(
+                                      width: 51,height: 51,
+                                      decoration: BoxDecoration(
+                                          boxShadow: [BoxShadow(
+                                            color: Colors.black12,
+                                            blurRadius: 3,
+                                          )],
+                                          color:AppColor.primarytext,
+                                          borderRadius: BorderRadius.circular(10)
+                                      ),
+                                        child: Icon(Icons.traffic,color: AppColor.primary,size: 30,)                                    ),
+                                    SizedBox(height: 3,),
+                                    Text("Protocols",style: TextStyle(fontSize: 10),),
+                                  ])
+                            ],),
 
 
-              ],
-            ),
-          )
+
+
+
+
+                        ]),
+                  ),),
+                SizedBox(height: 10,),
+
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Premium Plans",style: TextStyle(fontWeight: FontWeight.w500,
+                          fontSize: 16),),
+
+                      SizedBox(height: 10,),
+
+                      SingleChildScrollView(scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            Stack(
+                                children:[Container(
+                                  height: 101,width:158,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(15),
+                                      gradient: LinearGradient(
+                                          colors: [Color(0xFF48C9A1),
+                                            AppColor.primary],
+                                          begin: Alignment.topCenter,
+                                          end:Alignment.bottomCenter,
+                                          stops: [0.4,0.8]
+                                      )),
+                                ),
+                                  Positioned(left: 18,top: 10,
+                                    child: Text("Monthly Parking",style: TextStyle(fontSize: 15,
+                                        fontWeight: FontWeight.w600,color: Color(0xFFFBFF35)),),
+                                  ),
+                                  Positioned(left: 18,top: 30,
+                                    child: Text("Dedicated parking available",
+                                      style: TextStyle(fontSize: 8,
+                                        fontWeight: FontWeight.w500,color: Color(0xFFFFFFFF)),),
+                                  ),
+                                  Positioned(left: 18,top: 40,
+                                    child: Text("near you.",
+                                      style: TextStyle(fontSize: 8,
+                                          fontWeight: FontWeight.w500,color: Color(0xFFFFFFFF)),),
+                                  ),
+                                  Positioned( left: 18,top: 65,
+                                    child: Container(width: 82,height: 22,
+                                      decoration: BoxDecoration(
+                                          color: Color(0xFFFFFFFF),
+                                          borderRadius: BorderRadius.circular(12)
+                                      ),
+                                      child: Row(crossAxisAlignment: CrossAxisAlignment.center,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Text("Explore Now",style: TextStyle(fontSize: 8,
+                                              fontWeight: FontWeight.w600),),
+                                          SizedBox(width: 3,),
+                                          Icon(Icons.arrow_forward,size: 11,)
+                                        ],),
+                                    ),),
+                                  Positioned(bottom: 15,right: 10,
+                                      child: Image.asset("images/cars.png",width: 42,height: 46,))
+
+                                ]),
+                            SizedBox(width: 12,),
+                            Stack(
+                                children:[Container(
+                                  height: 101,width:158,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(15),
+                                      gradient: LinearGradient(
+                                          colors: [Color(0xFF48C9A1),
+                                            AppColor.primary],
+                                          begin: Alignment.topCenter,
+                                          end:Alignment.bottomCenter,
+                                          stops: [0.4,0.8]
+                                      )),
+                                ),
+                                  Positioned(left: 24,top: 10,
+                                    child: Text("Elite Car Wash ",style: TextStyle(fontSize: 15,
+                                        fontWeight: FontWeight.w600,color: Color(0xFFFBFF35)),),
+                                  ),
+                                  Positioned(left: 18,top: 30,
+                                    child: Text("Elite car grooming at your ",
+                                      style: TextStyle(fontSize: 8,
+                                          fontWeight: FontWeight.w500,color: Color(0xFFFFFFFF)),),
+                                  ),
+                                  Positioned(left: 18,top: 40,
+                                    child: Text("doorstep.",
+                                      style: TextStyle(fontSize: 8,
+                                          fontWeight: FontWeight.w500,color: Color(0xFFFFFFFF)),),
+                                  ),
+                                  Positioned( left: 18,top: 65,
+                                    child: Container(width: 82,height: 22,
+                                      decoration: BoxDecoration(
+                                          color: Color(0xFFFFFFFF),
+                                          borderRadius: BorderRadius.circular(12)
+                                      ),
+                                      child: Row(crossAxisAlignment: CrossAxisAlignment.center,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Text("Explore Now",style: TextStyle(fontSize: 8,
+                                              fontWeight: FontWeight.w600),),
+                                          SizedBox(width: 3,),
+                                          Icon(Icons.arrow_forward,size: 11,)
+                                        ],),
+                                    ),),
+                                  Positioned(bottom: 15,left: 100,
+                                      child: Image.asset("images/hcw.png",width: 62,height: 37,))
+
+                                ]),
+
+                          ],),
+                      )
+                    ],
+                  ),
+                ),
+
+                SizedBox(height: 10,),
+
+                Container(
+                  height: 234 ,width: MediaQuery.of(context).size.width*.92,
+
+                  decoration: BoxDecoration(
+                      boxShadow: [BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 3,
+                      )],
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(13.0),
+                    child: Column( crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Recharge & Bill Payments",style: TextStyle(fontWeight: FontWeight.w500,
+                              fontSize: 16),),
+
+                          SizedBox(height: 10,),
+
+
+                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: 51,height: 51,
+                                      decoration: BoxDecoration(
+                                          boxShadow: [BoxShadow(
+                                            color: Colors.black12,
+                                            blurRadius: 3,
+                                          )],
+                                          color:AppColor.primarytext,
+                                          borderRadius: BorderRadius.circular(10)
+                                      ),
+                                      child: Image.asset("images/r&b/r&b1.png"),
+                                    ),
+                                    SizedBox(height: 3,),
+                                    Text(" Fastag ",style: TextStyle(fontSize: 10),),
+                                    Text("Recharge",style: TextStyle(fontSize: 10),),
+
+                                  ]),
+                              Column(mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: 51,height: 51,
+                                      decoration: BoxDecoration(
+                                          boxShadow: [BoxShadow(
+                                            color: Colors.black12,
+                                            blurRadius: 3,
+                                          )],
+                                          color:AppColor.primarytext,
+                                          borderRadius: BorderRadius.circular(10)
+                                      ),
+                                      child: Image.asset("images/r&b/r&b2.png"),
+                                    ),
+                                    SizedBox(height: 3,),
+                                    Text("Mobile ",style: TextStyle(fontSize: 10),),
+                                    Text("Recharge",style: TextStyle(fontSize: 10),),
+
+                                  ]),
+                              Column(mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: 51,height: 51,
+                                      decoration: BoxDecoration(
+                                          boxShadow: [BoxShadow(
+                                            color: Colors.black12,
+                                            blurRadius: 3,
+                                          )],
+                                          color:AppColor.primarytext,
+                                          borderRadius: BorderRadius.circular(10)
+                                      ),
+                                      child: Image.asset("images/r&b/r&b3.png"),
+                                    ),
+                                    SizedBox(height: 3,),
+                                    Text("Electricity",style: TextStyle(fontSize: 10),),
+
+                                  ]),
+                              Column(mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: 51,height: 51,
+                                      decoration: BoxDecoration(
+                                          boxShadow: [BoxShadow(
+                                            color: Colors.black12,
+                                            blurRadius: 3,
+                                          )],
+                                          color:AppColor.primarytext,
+                                          borderRadius: BorderRadius.circular(10)
+                                      ),
+                                      child: Image.asset("images/r&b/r&b4.png"),
+                                    ),
+                                    SizedBox(height: 3,),
+                                    Text("Water",style: TextStyle(fontSize: 10),),
+
+                                  ]),
+                            ],),
+                          SizedBox(height: 10,),
+
+                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: 51,height: 51,
+                                      decoration: BoxDecoration(
+                                          boxShadow: [BoxShadow(
+                                            color: Colors.black12,
+                                            blurRadius: 3,
+                                          )],
+                                          color:AppColor.primarytext,
+                                          borderRadius: BorderRadius.circular(10)
+                                      ),
+                                      child: Image.asset("images/r&b/r&b5.png"),
+                                    ),
+                                    SizedBox(height: 3,),
+                                    Text(" Gas",style: TextStyle(fontSize: 10),),
+                                    Text("Cylinder",style: TextStyle(fontSize: 10),),
+
+                                  ]),
+                              Column(mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: 51,height: 51,
+                                      decoration: BoxDecoration(
+                                          boxShadow: [BoxShadow(
+                                            color: Colors.black12,
+                                            blurRadius: 3,
+                                          )],
+                                          color:AppColor.primarytext,
+                                          borderRadius: BorderRadius.circular(10)
+                                      ),
+                                      child: Image.asset("images/r&b/r&b6.png"),
+                                    ),
+                                    SizedBox(height: 3,),
+                                    Text("Loan",style: TextStyle(fontSize: 10),),
+                                    Text("Payment",style: TextStyle(fontSize: 10),),
+
+                                  ]),
+                              Column(mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: 51,height: 51,
+                                      decoration: BoxDecoration(
+                                          boxShadow: [BoxShadow(
+                                            color: Colors.black12,
+                                            blurRadius: 3,
+                                          )],
+                                          color:AppColor.primarytext,
+                                          borderRadius: BorderRadius.circular(10)
+                                      ),
+                                      child: Image.asset("images/r&b/r&b7.png"),
+                                    ),
+                                    SizedBox(height: 3,),
+                                    Text("DTH",style: TextStyle(fontSize: 10),),
+
+                                  ]),
+                              Column(mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: 51,height: 51,
+                                      decoration: BoxDecoration(
+                                          boxShadow: [BoxShadow(
+                                            color: Colors.black12,
+                                            blurRadius: 3,
+                                          )],
+                                          color:AppColor.primarytext,
+                                          borderRadius: BorderRadius.circular(10)
+                                      ),
+                                      child: Image.asset("images/r&b/r&b8.png"),
+                                    ),
+                                    SizedBox(height: 3,),
+                                    Text("House Rent",style: TextStyle(fontSize: 10),),
+
+                                  ]),
+                            ],),
+                        ]),
+                  ),),
+
+                SizedBox(height: 20,),
+
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SingleChildScrollView(scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Stack(
+                          children: [
+                            Container(height: 130,width: 223,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                gradient: LinearGradient(
+                                    colors: [AppColor.primary,
+                                      Color(0xFF27CD99)],
+                                    begin: Alignment.topLeft,
+                                    end:Alignment.bottomRight,
+                                    stops: [0.2,0.7]
+                                )),
+                            child: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('Get 15% off on',style: TextStyle(fontSize: 16,
+                                      color: Color(0xFFFBFF35)),),
+                                  Text('FASTag recharge',style: TextStyle(fontSize: 20,
+                                    color: Color(0xFFFFFFFF),),),
+                                  Text('Pay using Axis Bank Credit & Debit Cards',
+                                    style: TextStyle(fontSize: 8,color: Color(0xFFFFFFFF),),),
+                                  SizedBox(height: 15,),
+                                  Container(width: 92,height: 24,
+                                    decoration: BoxDecoration(
+                                        color: Color(0xFFFFFFFF),
+                                        borderRadius: BorderRadius.circular(12)
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text("Recharge Now",style: TextStyle(fontSize: 10,
+                                        fontWeight: FontWeight.w600),),
+                                  ),],),),),
+                            Positioned(bottom: 20,right: 15,
+                                child: Image.asset("images/fastag.png",height: 16,width: 74,))
+                          ]),
+
+                        SizedBox(width: 10,),
+                        Stack(
+                          children:[ Container(height: 130,width: 223,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                gradient: LinearGradient(
+                                    colors: [Color(0xFF1B53E4),
+                                      Color(0xFF268AFF),
+                                    ],
+                                    begin: Alignment.topLeft,
+                                    end:Alignment.bottomRight,
+                                    stops: [0.2,0.7]
+                                )),
+                            child: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('Reserve a Parking Slot',style: TextStyle(fontSize: 18,
+                                    color: Color(0xFFFFFFFF),),),
+                                  Text('Win 300ml petrol on your first',
+                                    style: TextStyle(fontSize: 10,color: Color(0xFFFFFFFF),),),
+                                  Text('parking!',
+                                    style: TextStyle(fontSize: 10,color: Color(0xFFFFFFFF),),),
+                                  SizedBox(height: 20,),
+                                  Container(width: 80,height: 24,
+                                    decoration: BoxDecoration(
+                                        color: Color(0xFFFFFFFF),
+                                        borderRadius: BorderRadius.circular(12)
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text("Explore Now",style: TextStyle(fontSize: 10,
+                                        fontWeight: FontWeight.w600),),
+                                  ),],),),),
+                            Positioned(bottom: 20,right: 15,
+                                child: Image.asset("images/ycar.jpeg",height: 42,width: 60,))
+                          ])
+                      ],),
+                  ),)
+
+              ],),
+          ),
+
+
+
+
         ],
         ),
       ),
