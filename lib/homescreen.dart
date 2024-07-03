@@ -2,6 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:parkqwik/colors.dart';
 
+import 'fastag_recharge_p1.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -607,8 +609,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                             ]),
                             SizedBox(width: 3,),
-                            
-                            
+
+
                             Stack(
                               children:[Container(height: 136,width: 148,
                                 //color: Colors.green,
@@ -673,6 +675,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 SizedBox(height: 10,),
+
                 Container(
                   height: 145 ,width: MediaQuery.of(context).size.width*.92,
 
@@ -910,18 +913,22 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [
                               Column(mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Container(
-                                      width: 51,height: 51,
-                                      decoration: BoxDecoration(
-                                          boxShadow: [BoxShadow(
-                                            color: Colors.black12,
-                                            blurRadius: 3,
-                                          )],
-                                          color:AppColor.primarytext,
-                                          borderRadius: BorderRadius.circular(10)
+                                    InkWell(
+                                      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> FastagRechargeP1()));},
+                                      child: Container(
+                                        width: 51,height: 51,
+                                        decoration: BoxDecoration(
+                                            boxShadow: [BoxShadow(
+                                              color: Colors.black12,
+                                              blurRadius: 3,
+                                            )],
+                                            color:AppColor.primarytext,
+                                            borderRadius: BorderRadius.circular(10)
+                                        ),
+                                        child: Image.asset("images/r&b/r&b1.png"),
                                       ),
-                                      child: Image.asset("images/r&b/r&b1.png"),
                                     ),
+                                    
                                     SizedBox(height: 3,),
                                     Text(" Fastag ",style: TextStyle(fontSize: 10),),
                                     Text("Recharge",style: TextStyle(fontSize: 10),),
@@ -962,6 +969,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                     SizedBox(height: 3,),
                                     Text("Electricity",style: TextStyle(fontSize: 10),),
+                                    SizedBox(height: 10,),
 
                                   ]),
                               Column(mainAxisAlignment: MainAxisAlignment.center,
@@ -980,6 +988,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                     SizedBox(height: 3,),
                                     Text("Water",style: TextStyle(fontSize: 10),),
+                                    SizedBox(height: 10,),
 
                                   ]),
                             ],),
@@ -1041,6 +1050,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                     SizedBox(height: 3,),
                                     Text("DTH",style: TextStyle(fontSize: 10),),
+                                    SizedBox(height: 10,),
 
                                   ]),
                               Column(mainAxisAlignment: MainAxisAlignment.center,
@@ -1059,7 +1069,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                     SizedBox(height: 3,),
                                     Text("House Rent",style: TextStyle(fontSize: 10),),
-
+                                    SizedBox(height: 10,),
                                   ]),
                             ],),
                         ]),
@@ -1147,7 +1157,317 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Image.asset("images/ycar.jpeg",height: 42,width: 60,))
                           ])
                       ],),
-                  ),)
+                  ),),
+
+                SizedBox(height: 10,),
+
+                Container(
+                  height: 145 ,width: MediaQuery.of(context).size.width*.92,
+
+                  decoration: BoxDecoration(
+                      boxShadow: [BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 3,
+                      )],
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(13.0),
+                    child: Column( crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Your Car’s Center",style: TextStyle(fontWeight: FontWeight.w500,
+                              fontSize: 16),),
+                          SizedBox(height: 5,),
+                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(height:90,width: 60,
+                                  child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 51,height: 51,
+                                          decoration: BoxDecoration(
+                                              boxShadow: [BoxShadow(
+                                                color: Colors.black12,
+                                                blurRadius: 3,
+                                              )],
+                                              color:AppColor.primarytext,
+                                              borderRadius: BorderRadius.circular(10)
+                                          ),
+                                          child: Container(height: 25,width: 25,
+                                              child: Image.asset("images/paychallan.png")),
+                                        ),
+                                        SizedBox(height: 3,),
+                                        Text("Pay",style: TextStyle(fontSize: 10),),
+                                        Text("Challans",style: TextStyle(fontSize: 10),),
+                                      ])),
+                              Column(
+                                  children: [
+                                    Container(
+                                      width: 51,height: 51,
+                                      decoration: BoxDecoration(
+                                          boxShadow: [BoxShadow(
+                                            color: Colors.black12,
+                                            blurRadius: 3,
+                                          )],
+                                          color:AppColor.primarytext,
+                                          borderRadius: BorderRadius.circular(10)
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(12.0),
+                                        child: Image.asset("images/crimereporter.png",),
+                                      ),
+                                    ),
+                                    SizedBox(height: 3,),
+                                    Text("Crime",style: TextStyle(fontSize: 10),),
+                                    Text("Reporter",style: TextStyle(fontSize: 10),),
+                                  ]),
+
+                              Column(
+                                  children: [
+                                    Container(
+                                      width: 51,height: 51,
+                                      decoration: BoxDecoration(
+                                          boxShadow: [BoxShadow(
+                                            color: Colors.black12,
+                                            blurRadius: 3,
+                                          )],
+                                          color:AppColor.primarytext,
+                                          borderRadius: BorderRadius.circular(10)
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(14.0),
+                                        child: Image.asset("images/rtocenter.png",height: 10,width: 10,),
+                                      ),),
+                                    SizedBox(height: 3,),
+                                    Text("RTO",style: TextStyle(fontSize: 10),),
+                                    Text("Center",style: TextStyle(fontSize: 10),),
+                                  ]),
+                              Column(
+                                  children: [
+                                    Container(
+                                        width: 51,height: 51,
+                                        decoration: BoxDecoration(
+                                            boxShadow: [BoxShadow(
+                                              color: Colors.black12,
+                                              blurRadius: 3,
+                                            )],
+                                            color:AppColor.primarytext,
+                                            borderRadius: BorderRadius.circular(10)
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(12.0),
+                                          child: Image.asset("images/pucccenter.png",height: 24,width: 24,),
+                                        ),),
+                                    SizedBox(height: 3,),
+                                    Text("PUCC",style: TextStyle(fontSize: 10),),
+                                    Text("Center",style: TextStyle(fontSize: 10),),
+                                  ])
+                            ],),
+
+
+
+
+
+
+                        ]),
+                  ),),
+
+                SizedBox(height: 10 ,),
+
+                Column(crossAxisAlignment: CrossAxisAlignment.start,
+                  //mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text("Trending",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+                    ),
+                    //SizedBox(height: 5,),
+                    Stack(
+                      children:[
+                        Container(
+                        height: 200,width:350,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(9)
+                        ),
+                        child: Image.asset("images/banner.png",),
+                      ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 15,left: 20),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Text('Save',style: TextStyle(fontSize: 25,
+                                      color: Color(0xFFFBFF35)),),
+                                  Icon(Icons.currency_rupee,size: 25,color: Color(0xFFFBFF35)),
+                                  Text('500',style: TextStyle(fontSize: 25,
+                                      color: Color(0xFFFBFF35)),),
+                                ],
+                              ),
+                              Text('On Your First EV Parking',style: TextStyle(fontSize: 16,
+                                color: Color(0xFFFFFFFF),),),
+
+                              SizedBox(height: 5,),
+
+                              Text('We provide dedicated monthly',
+                                style: TextStyle(fontSize: 10,color: Color(0xFFFFFFFF),
+                                fontWeight: FontWeight.w400),),
+
+                              Text('parking with surveillance',
+                                style: TextStyle(fontSize: 10,color: Color(0xFFFFFFFF),
+                                    fontWeight: FontWeight.w400),),
+
+
+                            ],),),
+                        Positioned(bottom: 35, left: 205,
+                            child: Image.asset("images/happycustomer.png",height: 26,width: 47,)),
+
+                        Positioned(bottom: 35,left: 255,
+                          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("100 +",style: TextStyle(fontSize: 14,fontWeight:FontWeight.w600,
+                                  color: Colors.white),),
+                              SizedBox(height: 0,),
+                              Text("Happy Customers",style: TextStyle(fontSize: 6,fontWeight:FontWeight.w400, color: Colors.white),),
+                            ],
+                          ),
+                        )
+                      ]
+                    )
+
+
+                  ],
+                ),
+
+                SizedBox(height: 10,),
+
+                Container(
+                  height: 145 ,width: MediaQuery.of(context).size.width*.92,
+
+                  decoration: BoxDecoration(
+                      boxShadow: [BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 3,
+                      )],
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(13.0),
+                    child: Column( crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Exclusive Offers",style: TextStyle(fontWeight: FontWeight.w500,
+                              fontSize: 16),),
+
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10,right: 10),
+                            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(height:90,width: 60,
+                                    child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            width: 51,height: 51,
+                                            decoration: BoxDecoration(
+                                                boxShadow: [BoxShadow(
+                                                  color: Colors.black12,
+                                                  blurRadius: 3,
+                                                )],
+                                                color:AppColor.primarytext,
+                                                borderRadius: BorderRadius.circular(10)
+                                            ),
+                                            child: Image.asset("images/rewards.png"),
+                                          ),
+                                          SizedBox(height: 3,),
+                                          Text("Rewards",style: TextStyle(fontSize: 10),),])),
+                                Column(
+                                    children: [
+                                      Container(
+                                        width: 51,height: 51,
+                                        decoration: BoxDecoration(
+                                            boxShadow: [BoxShadow(
+                                              color: Colors.black12,
+                                              blurRadius: 3,
+                                            )],
+                                            color:AppColor.primarytext,
+                                            borderRadius: BorderRadius.circular(10)
+                                        ),
+                                        child: Image.asset("images/discounts.png"),
+                                      ),
+                                      SizedBox(height: 3,),
+                                      Text("Discounts",style: TextStyle(fontSize: 10),),
+                                    ]),
+
+                                Column(
+                                    children: [
+                                      Container(
+                                        width: 51,height: 51,
+                                        decoration: BoxDecoration(
+                                            boxShadow: [BoxShadow(
+                                              color: Colors.black12,
+                                              blurRadius: 3,
+                                            )],
+                                            color:AppColor.primarytext,
+                                            borderRadius: BorderRadius.circular(10)
+                                        ),
+                                        child: Image.asset("images/refer&win.png"),),
+                                      SizedBox(height: 3,),
+                                      Text("Refer & Win",style: TextStyle(fontSize: 10),),
+
+                                    ]),
+
+
+                              ],),
+                          ),
+
+                        ]),
+                  ),),
+
+                SizedBox(height: 10,),
+
+                Column(crossAxisAlignment: CrossAxisAlignment.start,
+                  //mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text("How parkqwik works ?",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+                    ),
+                    //SizedBox(height: 5,),
+                    Stack(
+                        children:[
+                          Container(
+                            height: 152,width:328,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(9),
+                                gradient: LinearGradient(
+                                    colors: [Color(0xFF9EFFE1),
+                                      Color(0xFFE9FFF8)],
+                                    begin: Alignment.topCenter,
+                                    end:Alignment.bottomCenter,
+                                    stops: [.2,.8]
+                                )
+                            ),
+                            child: Center(child:Image.asset("images/iphone.png") ,),
+                          ),
+                          Positioned(top: 65,right: 160,
+                              child: Icon(Icons.play_circle,color: AppColor.primary,size: 24,))
+
+
+                        ]
+                    )
+
+
+                  ],
+                ),
+
+                SizedBox(height: 10,),
+
+
+
+
+
 
               ],),
           ),
