@@ -119,7 +119,7 @@ class _FastagRechargeP1State extends State<FastagRechargeP1> {
                           Positioned(bottom: 20,right: 0,
                               child: Image.asset("images/fuelstation.png",height: 48,width: 61,)),
                           Positioned(bottom: 15,right: 35,
-                              child: Image.asset("images/ycarside.png",height: 24,width: 56,)),
+                              child: Image.asset("images/ycarrside.png",height: 24,width: 56,)),
 
                         ])
                   ],),

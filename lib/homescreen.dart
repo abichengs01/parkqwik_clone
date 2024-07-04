@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:parkqwik/colors.dart';
+import 'package:parkqwik/vehicle_insurance.dart';
 
 import 'fastag_recharge_p1.dart';
 
@@ -130,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(height: 15,),
 
                 Container(
-                  height: 215,width: MediaQuery.of(context).size.width*.92,
+                  height: 235,width: MediaQuery.of(context).size.width*.92,
 
                   decoration: BoxDecoration(
                     boxShadow: [BoxShadow(
@@ -147,12 +148,18 @@ class _HomeScreenState extends State<HomeScreen> {
                         Text("Services",style: TextStyle(fontWeight: FontWeight.w500,
                         fontSize: 16),),
 
+                        SizedBox(height: 10,),
+
                         Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
                               height: 80,width: 60,
                               decoration: BoxDecoration(shape: BoxShape.rectangle,
-                              ),
+                                boxShadow: [BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 3,
+                                )],
+                                color: Colors.white,borderRadius: BorderRadius.circular(10)),
                               child: Column(
                                 children: [
                                   Image.asset("images/services/lpin.png",width: 40,),
@@ -165,6 +172,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             Container(
                               height: 80,width: 60,
                               decoration: BoxDecoration(shape: BoxShape.rectangle,
+                                  boxShadow: [BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3,
+                                  )],
+                                  color: Colors.white,borderRadius: BorderRadius.circular(10)
                               ),
                               child: Column(
                                 children: [
@@ -177,6 +189,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             Container(
                               height: 80,width: 60,
                               decoration: BoxDecoration(shape: BoxShape.rectangle,
+                                  boxShadow: [BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3,
+                                  )],
+                                  color: Colors.white,borderRadius: BorderRadius.circular(10)
                               ),
                               child: Column(
                                 children: [
@@ -186,27 +203,42 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
 
-                            Container(
-                              height: 80,width: 60,
-                              decoration: BoxDecoration(shape: BoxShape.rectangle,
-                              ),
-                              child: Column(
-                                children: [
-                                  Image.asset("images/services/vi.jpeg",width: 40,),
-                                  Text("Vehicle",style: TextStyle(fontSize: 10),),
-                                  Text("Insurance",style: TextStyle(fontSize: 10),),
-                                ],
+                            InkWell(
+                              onTap:(){ Navigator.push(context, MaterialPageRoute(builder: (context)=> VehicleInsurance()));},
+                              child: Container(
+                                height: 80,width: 60,
+                                decoration: BoxDecoration(shape: BoxShape.rectangle,
+                                    boxShadow: [BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 3,
+                                    )],
+                                    color: Colors.white,borderRadius: BorderRadius.circular(10)
+                                ),
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: 5,),
+                                    Image.asset("images/services/vi.jpeg",width: 40,),
+                                    SizedBox(height: 2,),
+                                    Text("Vehicle",style: TextStyle(fontSize: 10),),
+                                    Text("Insurance",style: TextStyle(fontSize: 10),),
+                                  ],
+                                ),
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(height: 5,),
+                        SizedBox(height: 10,),
 
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
                               height: 80,width: 60,
                               decoration: BoxDecoration(shape: BoxShape.rectangle,
+                                  boxShadow: [BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3,
+                                  )],
+                                  color: Colors.white,borderRadius: BorderRadius.circular(10)
                               ),
                               child: Column(
                                 children: [
@@ -220,6 +252,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             Container(
                               height: 80,width: 60,
                               decoration: BoxDecoration(shape: BoxShape.rectangle,
+                                  boxShadow: [BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3,
+                                  )],
+                                  color: Colors.white,borderRadius: BorderRadius.circular(10)
                               ),
                               child: Column(
                                 children: [
@@ -233,6 +270,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             Container(
                               height: 80,width: 60,
                               decoration: BoxDecoration(shape: BoxShape.rectangle,
+                                  boxShadow: [BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3,
+                                  )],
+                                  color: Colors.white,borderRadius: BorderRadius.circular(10)
                               ),
                               child: Column(
                                 children: [
@@ -246,10 +288,17 @@ class _HomeScreenState extends State<HomeScreen> {
                             Container(
                               height: 80,width: 60,
                               decoration: BoxDecoration(shape: BoxShape.rectangle,
+                                  boxShadow: [BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3,
+                                  )],
+                                  color: Colors.white,borderRadius: BorderRadius.circular(10)
                               ),
                               child: Column(
                                 children: [
+                                  SizedBox(height: 5,),
                                   Image.asset("images/services/vp.png",width: 40,),
+                                  SizedBox(height: 5,),
                                   Text("Valet",style: TextStyle(fontSize: 10),),
                                   Text("Parking",style: TextStyle(fontSize: 10),),
                                 ],
