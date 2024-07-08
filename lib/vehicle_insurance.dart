@@ -350,9 +350,10 @@ class _VehicleInsuranceState extends State<VehicleInsurance> {
                     )],color: Colors.white,
                     borderRadius: BorderRadius.circular(8)
                 ),
-                child: ExpansionTile(
+                child:
+                ExpansionTile(
                   title: Text("Is it necessary to notify my insurance company if I modify my car?",
-                      style: TextStyle(fontSize: 14,fontWeight: FontWeight.w500)),
+                      style: TextStyle(fontSize: 14,fontWeight: FontWeight.w500)) ,
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(15.0),
