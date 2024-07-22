@@ -372,3 +372,36 @@ class _VehicleInsuranceState extends State<VehicleInsurance> {
     );
   }
 }
+
+// Container(height: 64,
+// decoration: BoxDecoration(
+// boxShadow: [BoxShadow(
+// color: Colors.black12,
+// blurRadius: 3,
+// )],
+// color: Color(0xFFFFFFFF),
+// borderRadius: BorderRadius.circular(15)
+// ),
+// child: Padding(
+// padding: const EdgeInsets.all(5.0),
+// child: ListTile(tileColor: Color(0xFFFFFFFF),
+// shape: RoundedRectangleBorder(
+// borderRadius: BorderRadius.circular(10),
+// ),
+// leading: Row(
+// mainAxisSize: MainAxisSize.min,
+// children: [
+// Text("General",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400),),
+// Spacer(),
+// VerticalDivider(),
+// SizedBox(width: 15,),
+// Icon(Icons.currency_rupee,size: 16,color: AppColor.primary,),
+// Text("100",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w500,
+// color: AppColor.primary),)
+// ],
+// ),
+
+//
+// ),
+// ),
+// )
