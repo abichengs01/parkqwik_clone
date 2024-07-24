@@ -11,6 +11,52 @@ class Protocols extends StatefulWidget {
 }
 
 class _ProtocolsState extends State<Protocols> {
+
+  TextEditingController _stateController = TextEditingController();
+  String _selectedState = '';
+
+  final List<String> statesList = [
+    'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh',
+    'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka',
+    'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram',
+    'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana',
+    'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal'
+  ];
+
+  void _openStateSelector() async {
+    String selectedState = await showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          height: 500.0,
+          child: Column(
+            children: <Widget>[
+              ListTile(
+                title: Text('Select State',style: TextStyle(
+                    fontWeight: FontWeight.w600,color: Colors.black),),
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: statesList.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    final state = statesList[index];
+                    return ListTile(
+                      title: Text(state),
+                      onTap: () {
+                        setState(() {
+                          _selectedState = state;
+                          _stateController.text = _selectedState;
+                        });},
+                    );
+                    },
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,16 +72,36 @@ class _ProtocolsState extends State<Protocols> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
           child: Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(15.0),
             child: Column(mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // ExpansionTile(title: Text("Select Your State",
-                // style: TextStyle(fontSize: 14,fontWeight: FontWeight.w500)),)
+                Container( height: 40,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey.shade200),
+                      color: Color(0xFFFFFFFF),
+                      borderRadius: BorderRadius.circular(9)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 15.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: "Select Your State",
+                        hintStyle: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,
+                            color:Color(0xFFAFAFAF) ),
+                        border: InputBorder.none,
+                        suffixIcon: Icon(Icons.arrow_drop_down,color: AppColor.primary,size: 25,)
+                      ),
+                      controller: _stateController,
+                      onTap: _openStateSelector,
+                    ),
+                  ),
+
+                ),
+                SizedBox(height: 8,),
                 ListTile(tileColor: Color(0xFFF0FFFA),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
-                    //side: BorderSide(color: Colors.black),
                   ),
                   leading: Icon(Icons.traffic,color: AppColor.primary,size: 43,),
                   title: Text("Traffic fines in Tamil Nadu",style: TextStyle(
