@@ -65,6 +65,7 @@ flutter:
   assets:
      - images/
      - images/r&b/
+     - images/r&w/
      - images/hs/
      - images/hs/others/
      - images/hs/others/deals/

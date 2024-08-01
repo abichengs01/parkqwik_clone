@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:parkqwik/colors.dart';
 import 'package:parkqwik/protocol.dart';
+import 'package:parkqwik/refer_win.dart';
 import 'package:parkqwik/vehicle_insurance.dart';
 
 import 'fastag_recharge_p1.dart';
@@ -513,7 +514,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 _CurrentPage =value;
                               });
                             }
-                          ) ),
+                          )
+                      ),
                     ),
                     SizedBox(height: 5,),
 
@@ -1453,23 +1455,26 @@ class _HomeScreenState extends State<HomeScreen> {
                                       Text("Discounts",style: TextStyle(fontSize: 10),),
                                     ]),
 
-                                Column(
-                                    children: [
-                                      Container(
-                                        width: 51,height: 51,
-                                        decoration: BoxDecoration(
-                                            boxShadow: [BoxShadow(
-                                              color: Colors.black12,
-                                              blurRadius: 3,
-                                            )],
-                                            color:AppColor.primarytext,
-                                            borderRadius: BorderRadius.circular(10)
-                                        ),
-                                        child: Image.asset("images/refer&win.png"),),
-                                      SizedBox(height: 3,),
-                                      Text("Refer & Win",style: TextStyle(fontSize: 10),),
+                                InkWell(
+                                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> ReferWin()));},
+                                  child: Column(
+                                      children: [
+                                        Container(
+                                          width: 51,height: 51,
+                                          decoration: BoxDecoration(
+                                              boxShadow: [BoxShadow(
+                                                color: Colors.black12,
+                                                blurRadius: 3,
+                                              )],
+                                              color:AppColor.primarytext,
+                                              borderRadius: BorderRadius.circular(10)
+                                          ),
+                                          child: Image.asset("images/refer&win.png"),),
+                                        SizedBox(height: 3,),
+                                        Text("Refer & Win",style: TextStyle(fontSize: 10),),
 
-                                    ]),
+                                      ]),
+                                ),
 
 
                               ],),
