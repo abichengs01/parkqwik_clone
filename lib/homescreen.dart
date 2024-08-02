@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:parkqwik/colors.dart';
 import 'package:parkqwik/protocol.dart';
 import 'package:parkqwik/refer_win.dart';
+import 'package:parkqwik/rewards.dart';
 import 'package:parkqwik/vehicle_insurance.dart';
 
 import 'fastag_recharge_p1.dart';
@@ -1421,22 +1422,25 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Container(height:90,width: 60,
-                                    child: Column(mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            width: 51,height: 51,
-                                            decoration: BoxDecoration(
-                                                boxShadow: [BoxShadow(
-                                                  color: Colors.black12,
-                                                  blurRadius: 3,
-                                                )],
-                                                color:AppColor.primarytext,
-                                                borderRadius: BorderRadius.circular(10)
+                                    child: InkWell(
+                                      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Rewards()));},
+                                      child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                                          children: [
+                                            Container(
+                                              width: 51,height: 51,
+                                              decoration: BoxDecoration(
+                                                  boxShadow: [BoxShadow(
+                                                    color: Colors.black12,
+                                                    blurRadius: 3,
+                                                  )],
+                                                  color:AppColor.primarytext,
+                                                  borderRadius: BorderRadius.circular(10)
+                                              ),
+                                              child: Image.asset("images/rewards.png"),
                                             ),
-                                            child: Image.asset("images/rewards.png"),
-                                          ),
-                                          SizedBox(height: 3,),
-                                          Text("Rewards",style: TextStyle(fontSize: 10),),])),
+                                            SizedBox(height: 3,),
+                                            Text("Rewards",style: TextStyle(fontSize: 10),),]),
+                                    )),
                                 Column(
                                     children: [
                                       Container(
