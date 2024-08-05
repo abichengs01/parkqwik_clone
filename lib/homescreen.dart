@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:parkqwik/colors.dart';
+import 'package:parkqwik/discounts.dart';
 import 'package:parkqwik/protocol.dart';
 import 'package:parkqwik/refer_win.dart';
 import 'package:parkqwik/rewards.dart';
@@ -1252,8 +1253,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ),
                                           child: Container(height: 25,width: 25,
                                               child: Image.asset("images/paychallan.png")),
-                                        ),
-                                        SizedBox(height: 3,),
+                                        ), SizedBox(height: 3,),
                                         Text("Pay",style: TextStyle(fontSize: 10),),
                                         Text("Challans",style: TextStyle(fontSize: 10),),
                                       ])),
@@ -1360,6 +1360,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Icon(Icons.currency_rupee,size: 25,color: Color(0xFFFBFF35)),
                                   Text('500',style: TextStyle(fontSize: 25,
                                       color: Color(0xFFFBFF35)),),
+
                                 ],
                               ),
                               Text('On Your First EV Parking',style: TextStyle(fontSize: 16,
@@ -1441,23 +1442,26 @@ class _HomeScreenState extends State<HomeScreen> {
                                             SizedBox(height: 3,),
                                             Text("Rewards",style: TextStyle(fontSize: 10),),]),
                                     )),
-                                Column(
-                                    children: [
-                                      Container(
-                                        width: 51,height: 51,
-                                        decoration: BoxDecoration(
-                                            boxShadow: [BoxShadow(
-                                              color: Colors.black12,
-                                              blurRadius: 3,
-                                            )],
-                                            color:AppColor.primarytext,
-                                            borderRadius: BorderRadius.circular(10)
+                                InkWell(
+                                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Discounts()));},
+                                  child: Column(
+                                      children: [
+                                        Container(
+                                          width: 51,height: 51,
+                                          decoration: BoxDecoration(
+                                              boxShadow: [BoxShadow(
+                                                color: Colors.black12,
+                                                blurRadius: 3,
+                                              )],
+                                              color:AppColor.primarytext,
+                                              borderRadius: BorderRadius.circular(10)
+                                          ),
+                                          child: Image.asset("images/discounts.png"),
                                         ),
-                                        child: Image.asset("images/discounts.png"),
-                                      ),
-                                      SizedBox(height: 3,),
-                                      Text("Discounts",style: TextStyle(fontSize: 10),),
-                                    ]),
+                                        SizedBox(height: 3,),
+                                        Text("Discounts",style: TextStyle(fontSize: 10),),
+                                      ]),
+                                ),
 
                                 InkWell(
                                   onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> ReferWin()));},
