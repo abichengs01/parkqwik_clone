@@ -6,6 +6,7 @@ import 'package:parkqwik/protocol.dart';
 import 'package:parkqwik/refer_win.dart';
 import 'package:parkqwik/rewards.dart';
 import 'package:parkqwik/vehicle_insurance.dart';
+import 'package:parkqwik/wallet.dart';
 
 import 'fastag_recharge_p1.dart';
 
@@ -91,26 +92,31 @@ class _HomeScreenState extends State<HomeScreen> {
                           icon:(Icon(Icons.add_circle)), label: Text("Add Vehicle")),
                     ),
                     SizedBox(width: 10,),
-                    Stack(
-                      children:[ CircleAvatar(
-                        radius: 15,
-                        backgroundColor: Colors.white.withOpacity(0.2),
-                        child:Image.asset("images/hs/wallet.png",height: 18,)
-                      ),
-                        Container(
-                          width: 20,height: 10,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Color(0xFFFFCA28)
-                          ),
-                          child: Row(
-                            children: [
-                              Icon(Icons.currency_rupee,size: 7,),
-                              Text("450",style: TextStyle(fontSize:6,fontWeight: FontWeight.bold),)
-                            ],
-                          ),
-                        )
-                    ]),
+
+                    InkWell(
+                      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Wallet()));},
+                      child: Stack(
+                        children:[ CircleAvatar(
+                          radius: 15,
+                          backgroundColor: Colors.white.withOpacity(0.2),
+                          child:Image.asset("images/hs/wallet.png",height: 18,)
+                        ),
+                          Container(
+                            width: 20,height: 10,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Color(0xFFFFCA28)
+                            ),
+                            child: Row(
+                              children: [
+                                Icon(Icons.currency_rupee,size: 7,),
+                                Text("450",style: TextStyle(fontSize:6,fontWeight: FontWeight.bold),)
+                              ],
+                            ),
+                          )
+                      ]),
+                    ),
+
                     SizedBox(width: 5,),
                     Stack(
                       children:[ CircleAvatar(
