@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:parkqwik/colors.dart';
 import 'package:parkqwik/discounts.dart';
+import 'package:parkqwik/profile.dart';
 import 'package:parkqwik/protocol.dart';
 import 'package:parkqwik/refer_win.dart';
 import 'package:parkqwik/rewards.dart';
@@ -65,27 +66,30 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(height: 50,),
                 Row(mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Stack(
-                      children: [
-                        // CircleAvatar( radius: 26,
-                        // backgroundImage: AssetImage("images/hs/dp.png",),),
-                        Container(
-                            //child: Image.asset("images/hs/dp.png",fit: BoxFit.fill),
-                          height: 51,width: 51,
-                          //margin: EdgeInsets.all(5),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                              image: DecorationImage(image: AssetImage("images/hs/dp.png"),
-                              fit: BoxFit.fill),
-                              shape: BoxShape.circle
-                          ),),
+                    InkWell(
+                      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Profile()));},
+                      child: Stack(
+                        children: [
+                          // CircleAvatar( radius: 26,
+                          // backgroundImage: AssetImage("images/hs/dp.png",),),
+                          Container(
+                              //child: Image.asset("images/hs/dp.png",fit: BoxFit.fill),
+                            height: 51,width: 51,
+                            //margin: EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                                image: DecorationImage(image: AssetImage("images/hs/dp.png"),
+                                fit: BoxFit.fill),
+                                shape: BoxShape.circle
+                            ),),
 
-                        Positioned(bottom: 0,right: 0,
-                          child: CircleAvatar( radius: 10,
-                            backgroundColor: Colors.white,
-                          child: Icon(Icons.menu,size: 15,),),
-                        ),
-                    ]),
+                          Positioned(bottom: 0,right: 0,
+                            child: CircleAvatar( radius: 10,
+                              backgroundColor: Colors.white,
+                            child: Icon(Icons.menu,size: 15,),),
+                          ),
+                      ]),
+                    ),
                      SizedBox(width: 20,),
                     Container(width: 159,height: 32,
                       child: ElevatedButton.icon(onPressed: (){},
