@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parkqwik/wpaymentpage.dart';
 
 import 'colors.dart';
 
@@ -132,7 +133,8 @@ class _WalletState extends State<Wallet> {
                   ),
                   SizedBox(height: 20,),
                   Container(height: 41,width: 292,
-                      child: ElevatedButton(onPressed:null,
+                      child: ElevatedButton(
+                        onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context)=> WPaymentPage()));},
                         style: ButtonStyle(
                           //surfaceTintColor: MaterialStateProperty.all(AppColor.primary),
                             backgroundColor: MaterialStateProperty.all(AppColor.primary),
@@ -143,7 +145,8 @@ class _WalletState extends State<Wallet> {
                         child: Text("Add Now",style: TextStyle(
                             fontSize: 16,fontWeight: FontWeight.w600,color:AppColor.primarytext
                         ),),
-                      )),],),),
+                      )),
+                ],),),
             SizedBox(height: 15,),
             SingleChildScrollView(scrollDirection: Axis.horizontal,
               child: Row(

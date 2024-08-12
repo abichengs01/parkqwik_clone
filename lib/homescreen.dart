@@ -100,7 +100,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     InkWell(
                       onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Wallet()));},
                       child: Stack(
-                        children:[ CircleAvatar(
+                        children:[
+                          CircleAvatar(
                           radius: 15,
                           backgroundColor: Colors.white.withOpacity(0.2),
                           child:Image.asset("images/hs/wallet.png",height: 18,)
