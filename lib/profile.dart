@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'colors.dart';
+import 'my_profile.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -81,7 +82,7 @@ class _ProfileState extends State<Profile> {
                           child: Row(mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Icon(Icons.share,color: Colors.white,size: 14,),
-                              Text("Share QR",style: TextStyle(color: Colors.white),)
+                              Text("Share Link",style: TextStyle(color: Colors.white),)
                             ],
                           ),
                         ),
@@ -97,6 +98,7 @@ class _ProfileState extends State<Profile> {
 
 
               ListTile(
+                onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> MyProfile()));},
                 leading: Icon(Icons.person,color: AppColor.primary,size: 24,),
                 title: Text("My Profile",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w500),),
                 subtitle: Text("Your Personal Details",style: TextStyle(fontSize: 12,
